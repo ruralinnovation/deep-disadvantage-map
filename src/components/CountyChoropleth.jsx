@@ -19,8 +19,6 @@ const CountyChoropleth = ({ mapboxToken, geojsonData }) => {
     padding: 20 // Optional padding around the bounds
   });
 
- console.log(longitude, latitude, zoom);
-
   const dataLayer: FillLayer = {
     id: 'data',
     type: 'fill',
@@ -29,7 +27,7 @@ const CountyChoropleth = ({ mapboxToken, geojsonData }) => {
         property: 'index',
         stops: [
           [-10, 'red'],
-          [0, 'white'],
+          [0, '#FFFDD0'],
           [10, 'blue']
         ]
       },
