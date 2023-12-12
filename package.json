@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0",
     "react-map-gl": "^7.1.6",
     "react-scripts": "5.0.1",
+    "viewport-mercator-project": "^7.0.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
