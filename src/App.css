@@ -5,6 +5,11 @@
 	position: relative;
 }
 
+.App h1 {
+	font-family: monospace;
+	margin-bottom: 5px;
+}
+
 .controls {
 	width: 100%;
 	max-width: 1000px;
