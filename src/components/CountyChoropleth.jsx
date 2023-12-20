@@ -1,16 +1,19 @@
-import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import Map, {Source, Layer} from 'react-map-gl';
 import type {FillLayer} from 'react-map-gl';
 import { fitBounds } from 'viewport-mercator-project';
+import { format } from 'd3-format';
+
+const USA_BOUNDS = [
+    [-125, 24], // Southwest coordinates: [Longitude, Latitude]
+    [-66, 49]   // Northeast coordinates: [Longitude, Latitude]
+];
+
+const percentFormat = format('.1%');
 
 const CountyChoropleth = ({ mapboxToken, geojsonData }) => {
 
   const mapRef = useRef();
-
-  const USA_BOUNDS = [
-      [-125, 24], // Southwest coordinates: [Longitude, Latitude]
-      [-66, 49]   // Northeast coordinates: [Longitude, Latitude]
-  ];
 
  const { longitude, latitude, zoom } = fitBounds({
     width: window.innerWidth > 1000? 1000: window.innerWidth,
@@ -37,8 +40,6 @@ const CountyChoropleth = ({ mapboxToken, geojsonData }) => {
 
 
   const [hoverInfo, setHoverInfo] = useState(null);
-  const selectedCounty = (hoverInfo && hoverInfo.feature.properties.fips) || '';
-  const filter = useMemo(() => ['in', 'fips', selectedCounty], [selectedCounty]);
 
   const onHover = useCallback(event => {
     const {
@@ -87,9 +88,15 @@ const CountyChoropleth = ({ mapboxToken, geojsonData }) => {
       {hoverInfo && (
         <div className="tooltip" style={{left: hoverInfo.x, top: hoverInfo.y}}>
           <div>
-            <b>{hoverInfo.feature.properties.countyname}</b>
+            <b>{hoverInfo.feature.properties.countyname} ({hoverInfo.feature.properties.legend_category})</b>
             <br />
-            {hoverInfo.feature.properties.legend_category}
+            Employment pct. change: {percentFormat(hoverInfo.feature.properties.employed_pct_change)}
+            <br />
+            Per capita income pct. change: {percentFormat(hoverInfo.feature.properties.pci_pct_change)}
+            <br />
+            Poverty population pct. change: {percentFormat(hoverInfo.feature.properties.pop_poverty_status_determined_pct_change)}
+            <br />
+            High school attainment pct. change: {percentFormat(hoverInfo.feature.properties.highschool_or_higher_pct_change)}
           </div>
         </div>
       )}
