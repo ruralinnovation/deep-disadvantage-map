@@ -8,12 +8,37 @@
 .App h1 {
 	font-family: monospace;
 	margin-bottom: 5px;
+
+	font-family: "TT Hoves", "Montserrat", "Helvectica", sans-serif;
+	font-weight: 400;
 }
 
-.controls {
+.App h2 {
+	font-family: Bitter, monospace;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 1.2em;
+	
+	margin: 0px 0px 5px 0px;
+}
+
+
+.map-header-footer {
 	width: 100%;
 	max-width: 1000px;
 	margin: 0 auto;
+
+	font-family: Bitter, monospace;
+}
+
+.controls {
+	display: flex;
+}
+
+.controls-label {
+	align-items: center;
+	display: inline-flex;
+	margin-right: 10px;
 }
 
 .map-container {
