@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/deep-disadvantage-map/static/css/main.086903f5.css",
-    "main.js": "/deep-disadvantage-map/static/js/main.36cb7c85.js",
+    "main.js": "/deep-disadvantage-map/static/js/main.9935741b.js",
     "static/js/483.6fe4bfd2.chunk.js": "/deep-disadvantage-map/static/js/483.6fe4bfd2.chunk.js",
     "index.html": "/deep-disadvantage-map/index.html",
     "main.086903f5.css.map": "/deep-disadvantage-map/static/css/main.086903f5.css.map",
-    "main.36cb7c85.js.map": "/deep-disadvantage-map/static/js/main.36cb7c85.js.map",
+    "main.9935741b.js.map": "/deep-disadvantage-map/static/js/main.9935741b.js.map",
     "483.6fe4bfd2.chunk.js.map": "/deep-disadvantage-map/static/js/483.6fe4bfd2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.086903f5.css",
-    "static/js/main.36cb7c85.js"
+    "static/js/main.9935741b.js"
   ]
 }
