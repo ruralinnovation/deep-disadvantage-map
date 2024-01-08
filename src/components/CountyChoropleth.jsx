@@ -88,15 +88,21 @@ const CountyChoropleth = ({ mapboxToken, geojsonData }) => {
       {hoverInfo && (
         <div className="tooltip" style={{left: hoverInfo.x, top: hoverInfo.y}}>
           <div>
-            <b>{hoverInfo.feature.properties.countyname} ({hoverInfo.feature.properties.legend_category})</b>
+            <div className="tooltip-header">
+              <b>{hoverInfo.feature.properties.countyname} ({hoverInfo.feature.properties.legend_category})</b>
+              <br />
+              {hoverInfo.feature.properties.is_thriving === 1 && (<span style={{color:'#259299'}}>Thriving community</span>)}
+              {hoverInfo.feature.properties.is_comparator === 1 && (<span style={{color:'#234FBF'}}>Comparator community</span>)}
+            </div>
+            <p>
+            <em>Employment pct. change:</em> {percentFormat(hoverInfo.feature.properties.employed_pct_change)}
             <br />
-            Employment pct. change: {percentFormat(hoverInfo.feature.properties.employed_pct_change)}
+            <em>Per capita income pct. change:</em> {percentFormat(hoverInfo.feature.properties.pci_pct_change)}
             <br />
-            Per capita income pct. change: {percentFormat(hoverInfo.feature.properties.pci_pct_change)}
+            <em>Poverty population pct. change:</em> {percentFormat(hoverInfo.feature.properties.pop_poverty_status_determined_pct_change)}
             <br />
-            Poverty population pct. change: {percentFormat(hoverInfo.feature.properties.pop_poverty_status_determined_pct_change)}
-            <br />
-            High school attainment pct. change: {percentFormat(hoverInfo.feature.properties.highschool_or_higher_pct_change)}
+            <em>High school attainment pct. change:</em> {percentFormat(hoverInfo.feature.properties.highschool_or_higher_pct_change)}
+            </p>
           </div>
         </div>
       )}

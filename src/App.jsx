@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import countyGeoJSON from './data/dd_pp_map.json';
+import countyGeoJSON from './data/dd_pp_map_01_08.json';
 
 import CountyChoropleth from './components/CountyChoropleth';
 
