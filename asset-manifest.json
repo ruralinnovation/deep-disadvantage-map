@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/deep-disadvantage-map/static/css/main.5553fdb7.css",
-    "main.js": "/deep-disadvantage-map/static/js/main.782ffadd.js",
+    "main.css": "/deep-disadvantage-map/static/css/main.a470a1e4.css",
+    "main.js": "/deep-disadvantage-map/static/js/main.e92b04de.js",
     "static/js/483.6fe4bfd2.chunk.js": "/deep-disadvantage-map/static/js/483.6fe4bfd2.chunk.js",
     "index.html": "/deep-disadvantage-map/index.html",
-    "main.5553fdb7.css.map": "/deep-disadvantage-map/static/css/main.5553fdb7.css.map",
-    "main.782ffadd.js.map": "/deep-disadvantage-map/static/js/main.782ffadd.js.map",
+    "main.a470a1e4.css.map": "/deep-disadvantage-map/static/css/main.a470a1e4.css.map",
+    "main.e92b04de.js.map": "/deep-disadvantage-map/static/js/main.e92b04de.js.map",
     "483.6fe4bfd2.chunk.js.map": "/deep-disadvantage-map/static/js/483.6fe4bfd2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5553fdb7.css",
-    "static/js/main.782ffadd.js"
+    "static/css/main.a470a1e4.css",
+    "static/js/main.e92b04de.js"
   ]
 }
