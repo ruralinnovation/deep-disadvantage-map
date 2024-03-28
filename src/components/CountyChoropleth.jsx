@@ -22,7 +22,7 @@ const CountyChoropleth = ({ mapboxToken, geojsonData }) => {
     padding: 20 // Optional padding around the bounds
   });
 
-  const dataLayer: FillLayer = {
+  const dataLayer = {
     id: 'data',
     type: 'fill',
     paint: {

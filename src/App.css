@@ -50,3 +50,26 @@
 	max-width: 1000px;
 	height: 500px;
 }
+
+.cont-legend {
+	display: flex;
+	justify-content: left;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.cont-legend div {
+	height: 1.2rem;
+	width: 200px;
+	opacity: .7;
+}
+
+.cont-legend .start-label {
+	line-height: 1.3rem;
+	margin: 0px 5px 0px 0px;
+}
+
+.cont-legend .end-label {
+	line-height: 1.3rem;
+	margin: 0px 0px 0px 5px;
+}

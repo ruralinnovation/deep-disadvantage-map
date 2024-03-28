@@ -141,6 +141,12 @@ const App = () => {
                 />
               </FormGroup>
             </div>
+            <div className="cont-legend">
+              <p className="start-label">Most Disadvantaged</p>
+              <div  style={{"background": "linear-gradient(to right, red, #FFFDD0, blue)"}} >
+              </div>
+              <p className="end-label">Most Advantaged</p>
+            </div>
           </div>
           <div className="map-container">
             <CountyChoropleth mapboxToken={MAPBOX_TOKEN} geojsonData={data} />
