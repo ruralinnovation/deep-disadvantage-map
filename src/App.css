@@ -27,7 +27,7 @@
 	width: 100%;
 	max-width: 1000px;
 	margin: 0 auto;
-
+	padding-top: 10px;
 	font-family: Bitter, monospace;
 }
 
@@ -48,7 +48,7 @@
 	height: 100%;
 
 	max-width: 1000px;
-	height: 500px;
+	height: 485px;
 }
 
 .cont-legend {
